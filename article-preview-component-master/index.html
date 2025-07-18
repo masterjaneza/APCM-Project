@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+        <div class="image-box">
+            <img src="images/drawers.jpg"  />
+        </div>
+
+        <div class="content-box">
+
+          <h1>Shift to overall look and feel by <br /> adding these wonderful touches to <br /> furniture in your home</h1>
+
+          <br />
+
+          <h3>Ever been in a room and fel like something was missing? <br /> Perhaps it fel slightly bare and univiting. I've got some <br /> simple tips to help you make any room feel complete.</h3>
+
+          <br />
+
+          <div class="user">
+            <div class="user-img-box">
+                <img src="images/avatar-michelle.jpg" />
+              </div>
+
+              <div class="sec">
+                <h3>Michelle Appleton <br /> 28 jun 2020 </h3>
+                <img id="share-img" src="images/icon-share.svg" />
+              </div>
+            </div>
+
+        </div>
+
+        
+      </main>
+      
+      <div class="share-div">
+  
+        <div class="inside-content">
+          <p>share</p>
+          <img src="images/icon-facebook.svg" />
+          <img src="images/icon-twitter.svg" />
+          <img src="images/icon-pinterest.svg" />
+        </div>
+        
+      </div>
+
+      <script>
+        
+    let img = document.querySelector('#share-img');
+    let  divBox = document.querySelector('.share-div');
+
+     
+let toggleShareDiv = () => {
+    divBox.classList.toggle('active');
+};
+
+img.addEventListener('click', toggleShareDiv);
+
+  </script>
+
+</body>
+</html>
