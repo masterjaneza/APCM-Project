@@ -1,4 +1,7 @@
+/* Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Bruno+Ace&family=Bruno+Ace+SC&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca&family=Lobster&family=Manrope:wght@200..800&family=Margarine&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap");
+
+/* Websites Reset */
 
 * {
   padding: 0;
@@ -6,6 +9,8 @@
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
+
+/* Body Style */
 
 body {
   height: 100vh;
@@ -15,6 +20,8 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
+/* Main Style */
+
 main {
   width: 41%;
   height: 300px;
@@ -23,6 +30,7 @@ main {
   display: flex;
 }
 
+/* Giving the content to an equal position in main element */
 .image-box {
   width: 15%;
   flex: 1;
@@ -40,13 +48,6 @@ main .image-box img {
   flex: 1 0 12.3%;
   border-radius: 0 25px 25px 0;
   padding: 1.5rem;
-  overflow: hidden;
-  word-wrap: break-word;
-}
-.content-box h1,
-.content-box h3 {
-  overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 main .content-box h1 {
@@ -86,6 +87,8 @@ main .content-box h3 {
   height: 20px;
 }
 
+/* pop up share div style */
+
 .share-div {
   width: 300px;
   height: 60px;
@@ -98,12 +101,11 @@ main .content-box h3 {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s;
- 
 }
 
 .share-div.active {
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .share-div::after {
@@ -138,4 +140,90 @@ main .content-box h3 {
   width: 10px;
   height: 10px;
   background-color: #49556b;
+}
+
+
+.res-img {
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+}
+
+
+/* Responsive Design */
+
+@media (min-width: 1500px) and (max-width: 1835px) {
+  main .content-box h1 {
+    font-size: 1.1em;
+  }
+
+  main .content-box h3 {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 1500px) {
+  main {
+    width: 30%;
+    height: 530px;
+    flex-direction: column; /* Add this line */
+  }
+
+  .image-box {
+    width: 100%;
+    height: 150px;
+  }
+
+  main .image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+  }
+
+  main .content-box {
+      width: 100%;
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 0;
+      box-sizing: border-box;
+      padding-top: 70px;
+  }
+
+main .content-box h1,
+  main .content-box h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .user {
+    display: none;
+  }
+
+  .share-div {
+    opacity: 1;
+    left: 485px;
+    top: 645px;
+    width: 420px;
+    border-radius: 0 0 25px 25px;
+
+  }
+
+  .share-div::after {
+  content: none;
+}
+
+.res-img {
+  opacity: 1;
+  z-index: 99; 
+  position: relative;
+  left: 340px;
+  top: -10px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+}
+
 }
